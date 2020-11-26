@@ -70,7 +70,7 @@
                 {
                     "swimmHunkMetadata": {
                         "hunkComments": [
-                            "Note that we have to explicitly state all the fields of the schema"
+                            "Note that we have to **explicitly** state all the fields of the schema"
                         ]
                     },
                     "hunkDiffLines": [
@@ -94,5 +94,5 @@
     },
     "app_version": "0.2.8",
     "file_version": "1.0.4",
-    "last_commit_sha_for_swimm_patch": "e9b0b6492758618a44cebf13c98c2678a8921e6f"
+    "last_commit_sha_for_swimm_patch": "6da7b7d439df6ca45b5112456a88349abd6435c8"
 }
