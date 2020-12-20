@@ -10,6 +10,7 @@
         "monkey/monkey_island/cc/services/config_schema/internal.py_0"
     ],
     "tests": [],
+    "play_mode": "walkthrough",
     "hints": [
         "Look for `victims_max_exploit` - it's rather similar."
     ],

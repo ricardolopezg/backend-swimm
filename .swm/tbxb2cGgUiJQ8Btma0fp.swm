@@ -2,6 +2,7 @@
     "id": "tbxb2cGgUiJQ8Btma0fp",
     "name": "Add a simple Post Breach action",
     "tests": [],
+    "play_mode": "walkthrough",
     "hints": [
         "See `ScheduleJobs` PBA for an example of a PBA which only uses shell commands",
         "Make sure to add the PBA to the configuration as well."
