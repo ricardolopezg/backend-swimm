@@ -1,7 +1,7 @@
 {
     "id": "AzD8XysWg1BBXCjCDkfq",
     "name": "Add a new configuration setting to the Agent ⚙",
-    "dod": "Make the max victim number that Monkey will find before stopping configurable by the user instead of constant.",
+    "dod": "",
     "description": "# Make something configurable\n\nIn this unit, you will learn how to add a configuration option to Monkey and how to use it in the Monkey Agent code. \n\n## Why is this important?\n\nEnabling users to configure the Monkey's behaviour gives them a lot more freedom in how they want to use the Monkey and enables more use cases.\n\n## What is \"Max victims to find\"?\n\nThe Monkey has a function which finds \"victim\" machines on the network for the Monkey to try and exploit. It's called `get_victim_machines`. This function accepts an argument which limits how many machines the Monkey should find.\n\nWe want to make that value editable by the user instead of constant in the code.\n\n## Manual testing\n\n1. After you've performed the required changes, reload the Server and check your value exists in the Internal tab of the config (see image).\n\n2. Set the new value to 1, and run Monkey locally (from source). See that the Monkey only scans one machine.",
     "summary": "* When changing config schema by adding or deleting keys, you need to update the Blackbox Test configurations as well [here](https://github.com/guardicore/monkey/tree/develop/envs/monkey_zoo/blackbox/island_configs).",
     "hunksOrder": [
