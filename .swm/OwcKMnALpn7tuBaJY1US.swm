@@ -188,7 +188,7 @@
     ],
     "file_version": "2.0.0",
     "meta": {
-        "app_version": "0.3.7-0",
+        "app_version": "0.3.8-0",
         "file_blobs": {
             "monkey/common/data/system_info_collectors_names.py": "175a054e1408805a4cebbe27e2f9616db40988cf",
             "monkey/infection_monkey/system_info/collectors/hostname_collector.py": "ae9560815d14351f8b5d7c6fd50f6888d9cf4309",

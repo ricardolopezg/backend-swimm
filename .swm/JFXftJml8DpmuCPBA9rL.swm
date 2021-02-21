@@ -44,7 +44,7 @@
     ],
     "file_version": "2.0.0",
     "meta": {
-        "app_version": "0.3.7-0",
+        "app_version": "0.3.8-0",
         "file_blobs": {
             "monkey/monkey_island/cc/services/config_schema/definitions/post_breach_actions.py": "f1fe0f6f26030f3e9893bf63df97dd59d3837672"
         }
