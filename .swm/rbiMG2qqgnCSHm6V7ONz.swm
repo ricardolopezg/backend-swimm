@@ -1,0 +1,69 @@
+{
+    "id": "rbiMG2qqgnCSHm6V7ONz",
+    "name": "Adding Post Breach Actions",
+    "task": {
+        "dod": "",
+        "tests": [],
+        "hints": []
+    },
+    "content": [
+        {
+            "type": "text",
+            "text": "This guide will show you how to create a new _Post Breach action_ for the Infection Monkey. _Post Breach actions_ are \"extra\" actions that the Monkey can perform on the victim machines after it propagated to them.\n\n## Do I need a new PBA?\n\nIf all you want is to execute shell commands, then there's no need to add a new PBA - just configure the required commands in the Monkey Island configuration! If you think that those specific commands have reuse value in all deployments and not just your own, you can add a new PBA. If you need to run actual Python code, you must add a new PBA.\n"
+        },
+        {
+            "type": "text",
+            "text": "## How to add a new PBA\n\n### Monkey side\n\n#### Framework\n\n1. Create your new action in the following directory: `monkey/infection_monkey/post_breach/actions` by first creating a new file with the name of your action.\n2. In that file, create a class that inherits from the `PBA` class:\n\n```python\nfrom infection_monkey.post_breach.pba import PBA\n\nclass MyNewPba(PBA):\n```"
+        },
+        {
+            "type": "text",
+            "text": "\n3. Set the action name in the constructor, like so:\n\n```python\nclass MyNewPba(PBA):\n    def __init__(self):\n        super(MyNewPba, self).__init__(name=\"MyNewPba\")\n```"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " from infection_monkey.utils.users import get_commands_to_add_user\r",
+                " \r",
+                " \r",
+                "*class BackdoorUser(PBA):\r",
+                "*    def __init__(self):\r",
+                "*        linux_cmds, windows_cmds = get_commands_to_add_user(\r",
+                "*            WormConfiguration.user_to_add,\r",
+                "*            WormConfiguration.remote_user_pass)\r",
+                "*        super(BackdoorUser, self).__init__(\r",
+                "*            POST_BREACH_BACKDOOR_USER,\r",
+                "*            linux_cmd=' '.join(linux_cmds),\r",
+                "*            windows_cmd=windows_cmds)\r",
+                " "
+            ],
+            "firstLineNumber": 4,
+            "path": "monkey/infection_monkey/post_breach/actions/add_user.py",
+            "comments": [
+                "As an example:"
+            ]
+        },
+        {
+            "type": "text",
+            "text": "#### Implementation\n\nIf your PBA consists only of simple shell commands, you can reuse the generic PBA by passing the commands into the constructor. See the `add_user.py` PBA for reference.\n\nOtherwise, you'll need to override the `run` method with your own implementation. See the `communicate_as_new_user.py` PBA for reference. Make sure to send the relevant PostBreachTelem upon success/failure. You can log during the PBA as well."
+        },
+        {
+            "type": "text",
+            "text": "### Island side\n\n#### Configuration\n\nYou'll need to add your PBA to the `config_schema.py` file, under `post_breach_acts`, like so:\n\n```json\n\"post_breach_acts\": {\n            \"title\": \"Post breach actions\",\n            \"type\": \"string\",\n            \"anyOf\": [\n                # ...\n                {\n                    \"type\": \"string\",\n                    \"enum\": [\n                        \"MyNewPba\"\n                    ],\n                    \"title\": \"My new PBA\",\n                    \"attack_techniques\": []\n                },\n            ],\n        },\n```"
+        },
+        {
+            "type": "text",
+            "text": "Now you can choose your PBA when configuring the Monkey on the Monkey island:\n\n![PBA in configuration](https://i.imgur.com/9PrcWr0.png)"
+        },
+        {
+            "type": "text",
+            "text": ""
+        }
+    ],
+    "file_version": "2.0.0",
+    "meta": {
+        "app_version": "0.3.8-0",
+        "file_blobs": {
+            "monkey/infection_monkey/post_breach/actions/add_user.py": "58be89a1f114459aa3548fdeef16226ffe63aea0"
+        }
+    }
+}
