@@ -52,4 +52,4 @@ To upgrade when a new version comes out, download the new Monkey `.deb` file and
 
 If you'd like to keep your existing configuration, you can export it to a file by using the Export button and then import it to the new server.
 
-![Export configuration](../../images/setup/export-configuration.png "Export configuration")
+![Export configuration](https://www.guardicore.com/infectionmonkey/docs/images/setup/export-configuration.png "Export configuration")
