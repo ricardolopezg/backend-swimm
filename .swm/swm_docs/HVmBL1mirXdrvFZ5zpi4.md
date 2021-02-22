@@ -17,14 +17,14 @@ When ready, you can browse to  the Infection Monkey running on your fresh deploy
 
 You will be presented a login page. Use the username **monkey**, and the new EC2 instace’s instance ID for password. You can find the instance id by going to the EC2 console and selecting your instance. It should appear in the details pane below.
 
-![AWS instance ID](../../images/setup/aws/aws-instance-id.png "AWS instance ID")
+![AWS instance ID](https://www.guardicore.com/infectionmonkey/docs/images/setup/aws/aws-instance-id.png "AWS instance ID")
 
 ## Integration with AWS services
 
-The Monkey has built-in integrations with AWS services for better execution and reporting. See [Usage -> Integrations](../../usage/integrations) for more details.
+The Monkey has built-in integrations with AWS services for better execution and reporting. 
 
 ## Upgrading
 
 Currently there's no "upgrade-in-place" option when a new version comes out. To get the new version, you can deploy a new machine from the marketplace. If you'd like to keep your existing configuration, you can export it to a file by using the Export button and then import it to the new Monkey Island.
 
-![Export configuration](../../images/setup/export-configuration.png "Export configuration")
+![Export configuration](https://www.guardicore.com/infectionmonkey/docs/images/setup/export-configuration.png "Export configuration")
