@@ -1,0 +1,41 @@
+{
+    "id": "7jsNkcP7PRmcWrF0f3cj",
+    "name": "Accounts and Security",
+    "task": {
+        "dod": "",
+        "tests": [],
+        "hints": []
+    },
+    "content": [
+        {
+            "type": "text",
+            "text": "## Security in Infection Monkey\n\nThe first time you launch Monkey Island (Infection Monkey CC server), you'll be prompted to create an account and secure your island. After your account is created, the server will only be accessible via the credentials you chose.\n\nIf you want island to be accessible without credentials press *I want anyone to access the island*. Please note that this option is insecure: you should only pick this for use in development environments.\n\n## Resetting account credentials\n\nTo reset credentials edit `monkey_island\\cc\\server_config.json` by deleting `user` and `password_hash` variables. Then restart the Monkey Island server and you should be prompted with registration form again.\n\nExample `server_config.json` for account reset:\n\n```json\n{\n  \"server_config\": \"password\",\n  \"deployment\": \"develop\"\n}\n```"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                "*{\r",
+                "*  \"server_config\": \"password\",\r",
+                "*  \"deployment\": \"develop\"\r",
+                "*}\r",
+                " "
+            ],
+            "firstLineNumber": 1,
+            "path": "monkey/monkey_island/cc/server_config.json.default",
+            "comments": [
+                "You can look at this example that comes with the repo:"
+            ]
+        },
+        {
+            "type": "text",
+            "text": ""
+        }
+    ],
+    "file_version": "2.0.0",
+    "meta": {
+        "app_version": "0.3.8-0",
+        "file_blobs": {
+            "monkey/monkey_island/cc/server_config.json.default": "ecc4c17085f541544c205ceb688b7b2f7475db4b"
+        }
+    }
+}
