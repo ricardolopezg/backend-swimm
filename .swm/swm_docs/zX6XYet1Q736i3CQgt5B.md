@@ -18,4 +18,4 @@ There's no "upgrade-in-place" option for Docker. To get the new version, downloa
 
 If you'd like to keep your existing configuration, you can export it to a file by using the Export button and then import it to the new server.
 
-![Export configuration](../../images/setup/export-configuration.png "Export configuration")
+![Export configuration](https://www.guardicore.com/infectionmonkey/docs/images/setup/export-configuration.png "Export configuration")
