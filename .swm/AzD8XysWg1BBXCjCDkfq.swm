@@ -1,14 +1,12 @@
 {
     "id": "AzD8XysWg1BBXCjCDkfq",
     "name": "Add a new configuration setting to the Agent ⚙",
-    "file_version": "2.0.0",
-    "meta": {
-        "app_version": "0.3.8-0",
-        "file_blobs": {
-            "monkey/infection_monkey/config.py": "1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc",
-            "monkey/infection_monkey/monkey.py": "a15a06edff7b75a71925398353680ae180cad115",
-            "monkey/monkey_island/cc/services/config_schema/internal.py": "bdbae24615730e417ba7421e95358c09e9e2d3a0"
-        }
+    "task": {
+        "dod": "",
+        "tests": [],
+        "hints": [
+            "Look for `victims_max_exploit` - it's rather similar."
+        ]
     },
     "content": [
         {
@@ -56,7 +54,7 @@
             "type": "snippet",
             "path": "monkey/monkey_island/cc/services/config_schema/internal.py",
             "comments": [
-                "Note that we have to **explicitly** state all the fields of the schema"
+                "Note that we have to **explicitly** state all the fields of the schema in [[sym:monkey/monkey_island/cc/services/config_schema/internal.py(10417265-3f24-49c9-9c0f-3496ceb47d4d)]]"
             ],
             "firstLineNumber": 40,
             "lines": [
@@ -79,11 +77,20 @@
             "text": "* When changing config schema by adding or deleting keys, you need to update the Blackbox Test configurations as well [here](https://github.com/guardicore/monkey/tree/develop/envs/monkey_zoo/blackbox/island_configs)."
         }
     ],
-    "task": {
-        "dod": "",
-        "hints": [
-            "Look for `victims_max_exploit` - it's rather similar."
-        ],
-        "tests": []
+    "symbols": {
+        "10417265-3f24-49c9-9c0f-3496ceb47d4d": {
+            "type": "path",
+            "text": "monkey/monkey_island/cc/services/config_schema/internal.py",
+            "path": "monkey/monkey_island/cc/services/config_schema/internal.py"
+        }
+    },
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.0-0",
+        "file_blobs": {
+            "monkey/infection_monkey/config.py": "1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc",
+            "monkey/infection_monkey/monkey.py": "a15a06edff7b75a71925398353680ae180cad115",
+            "monkey/monkey_island/cc/services/config_schema/internal.py": "bdbae24615730e417ba7421e95358c09e9e2d3a0"
+        }
     }
 }
