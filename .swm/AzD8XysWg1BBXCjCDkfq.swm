@@ -54,7 +54,7 @@
             "type": "snippet",
             "path": "monkey/monkey_island/cc/services/config_schema/internal.py",
             "comments": [
-                "Note that we have to **explicitly** state all the fields of the schema in [[sym:./monkey/monkey_island/cc/services/config_schema/internal.py(10417265-3f24-49c9-9c0f-3496ceb47d4d)]], where all fields for every configuration value are declared."
+                "Note that we have to **explicitly** state all the fields of the schema in [[sym:./monkey/monkey_island/cc/services/config_schema/internal.py(10417265-3f24-49c9-9c0f-3496ceb47d4d)]], where all fields for every configuration value are declared.\n\nNote that we set the [[sym-text:default(ca7b3ed4-60d6-43dc-8ef8-9d209488bd95)]] value to [[sym-text:100(a9ca0925-e2a2-4f6f-a5ff-f450785a4f73)]] , and this value appears on the UI."
             ],
             "firstLineNumber": 40,
             "lines": [
@@ -82,11 +82,37 @@
             "type": "path",
             "text": "monkey/monkey_island/cc/services/config_schema/internal.py",
             "path": "monkey/monkey_island/cc/services/config_schema/internal.py"
+        },
+        "ca7b3ed4-60d6-43dc-8ef8-9d209488bd95": {
+            "symbol": "ca7b3ed4-60d6-43dc-8ef8-9d209488bd95",
+            "path": "monkey/monkey_island/cc/services/config_schema/internal.py",
+            "text": "default",
+            "lineNumber": 46,
+            "lineData": "                    \"default\": 100,",
+            "wordIndex": {
+                "start": 2,
+                "end": 2
+            },
+            "fileBlob": "bdbae24615730e417ba7421e95358c09e9e2d3a0",
+            "type": "generic_text"
+        },
+        "a9ca0925-e2a2-4f6f-a5ff-f450785a4f73": {
+            "symbol": "a9ca0925-e2a2-4f6f-a5ff-f450785a4f73",
+            "path": "monkey/monkey_island/cc/services/config_schema/internal.py",
+            "text": "100",
+            "lineNumber": 46,
+            "lineData": "                    \"default\": 100,",
+            "wordIndex": {
+                "start": 6,
+                "end": 6
+            },
+            "fileBlob": "bdbae24615730e417ba7421e95358c09e9e2d3a0",
+            "type": "generic_text"
         }
     },
     "file_version": "2.0.1",
     "meta": {
-        "app_version": "0.4.2-0",
+        "app_version": "0.4.6-0",
         "file_blobs": {
             "monkey/infection_monkey/config.py": "1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc",
             "monkey/infection_monkey/monkey.py": "a15a06edff7b75a71925398353680ae180cad115",
