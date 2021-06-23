@@ -1,14 +1,12 @@
 {
     "id": "AzD8XysWg1BBXCjCDkfq",
     "name": "Add a new configuration setting to the Agent ⚙",
-    "file_version": "2.0.0",
-    "meta": {
-        "app_version": "0.3.8-0",
-        "file_blobs": {
-            "monkey/infection_monkey/config.py": "1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc",
-            "monkey/infection_monkey/monkey.py": "a15a06edff7b75a71925398353680ae180cad115",
-            "monkey/monkey_island/cc/services/config_schema/internal.py": "bdbae24615730e417ba7421e95358c09e9e2d3a0"
-        }
+    "task": {
+        "dod": "",
+        "tests": [],
+        "hints": [
+            "Look for `victims_max_exploit` - it's rather similar."
+        ]
     },
     "content": [
         {
@@ -19,19 +17,19 @@
             "type": "snippet",
             "path": "monkey/infection_monkey/config.py",
             "comments": [
-                "In this step we define the value in `config.py`"
+                "In this step we define the value"
             ],
             "firstLineNumber": 131,
             "lines": [
-                "     exploiter_classes = []",
-                "     system_info_collector_classes = []",
-                " ",
+                "     exploiter_classes = []\r",
+                "     system_info_collector_classes = []\r",
+                " \r",
                 "*    # how many victims to look for in a single scan iteration",
                 "*    victims_max_find = 100",
                 "*",
-                "     # how many victims to exploit before stopping",
-                "     victims_max_exploit = 100",
-                " "
+                "     # how many victims to exploit before stopping\r",
+                "     victims_max_exploit = 100\r",
+                " \r"
             ]
         },
         {
@@ -42,36 +40,36 @@
             ],
             "firstLineNumber": 159,
             "lines": [
-                "                 if not self._keep_running or not WormConfiguration.alive:",
-                "                     break",
-                " ",
+                "                 if not self._keep_running or not WormConfiguration.alive:\r",
+                "                     break\r",
+                " \r",
                 "*                machines = self._network.get_victim_machines(max_find=WormConfiguration.victims_max_find,",
                 "*                                                             stop_callback=ControlClient.check_for_stop)",
-                "                 is_empty = True",
-                "                 for machine in machines:",
-                "                     if ControlClient.check_for_stop():"
+                "                 is_empty = True\r",
+                "                 for machine in machines:\r",
+                "                     if ControlClient.check_for_stop():\r"
             ]
         },
         {
             "type": "snippet",
             "path": "monkey/monkey_island/cc/services/config_schema/internal.py",
             "comments": [
-                "Note that we have to **explicitly** state all the fields of the schema"
+                "Note that we have to **explicitly** state all the fields of the schema in [[sym:./monkey/monkey_island/cc/services/config_schema/internal.py(10417265-3f24-49c9-9c0f-3496ceb47d4d)]], where all fields for every configuration value are declared."
             ],
             "firstLineNumber": 40,
             "lines": [
-                "             \"title\": \"Monkey\",",
-                "             \"type\": \"object\",",
-                "             \"properties\": {",
+                "             \"title\": \"Monkey\",\r",
+                "             \"type\": \"object\",\r",
+                "             \"properties\": {\r",
                 "*                \"victims_max_find\": {",
                 "*                    \"title\": \"Max victims to find\",",
                 "*                    \"type\": \"integer\",",
                 "*                    \"default\": 100,",
                 "*                    \"description\": \"Determines the maximum number of machines the monkey is allowed to scan\"",
                 "*                },",
-                "                 \"victims_max_exploit\": {",
-                "                     \"title\": \"Max victims to exploit\",",
-                "                     \"type\": \"integer\","
+                "                 \"victims_max_exploit\": {\r",
+                "                     \"title\": \"Max victims to exploit\",\r",
+                "                     \"type\": \"integer\",\r"
             ]
         },
         {
@@ -79,11 +77,20 @@
             "text": "* When changing config schema by adding or deleting keys, you need to update the Blackbox Test configurations as well [here](https://github.com/guardicore/monkey/tree/develop/envs/monkey_zoo/blackbox/island_configs)."
         }
     ],
-    "task": {
-        "dod": "",
-        "hints": [
-            "Look for `victims_max_exploit` - it's rather similar."
-        ],
-        "tests": []
+    "symbols": {
+        "10417265-3f24-49c9-9c0f-3496ceb47d4d": {
+            "type": "path",
+            "text": "monkey/monkey_island/cc/services/config_schema/internal.py",
+            "path": "monkey/monkey_island/cc/services/config_schema/internal.py"
+        }
+    },
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.2-0",
+        "file_blobs": {
+            "monkey/infection_monkey/config.py": "1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc",
+            "monkey/infection_monkey/monkey.py": "a15a06edff7b75a71925398353680ae180cad115",
+            "monkey/monkey_island/cc/services/config_schema/internal.py": "bdbae24615730e417ba7421e95358c09e9e2d3a0"
+        }
     }
 }
