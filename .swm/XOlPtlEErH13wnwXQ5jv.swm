@@ -1,0 +1,16 @@
+{
+    "id": "XOlPtlEErH13wnwXQ5jv",
+    "name": "debian",
+    "content": [
+        {
+            "type": "text",
+            "text": "Deployment\n----------\n\nTo extract the `tar.gz` file, run `tar -xvzf monkey-island-debian.tar.gz`.\n\nTo deploy the package, once you’ve extracted it, run the following commands:\n\n```\nsudo apt update\nsudo dpkg -i monkey_island.deb  # this might print errors\n```\n\nIf at this point, dpkg printed errors that look like this:\n\n```\ndpkg: error processing package gc-monkey-island (--install):\n    dependency problems - leaving unconfigured\nErrors were encountered while processing:\n    gc-monkey-island\n```\n\nThat just means that not all dependencies were pre-installed on your system. That’s no problem! Just run the following command, which will install all dependencies and then install the Monkey Island:\n\n```\nsudo apt install -f\n```\n\nTroubleshooting\n---------------\n\n### Trying to install on Ubuntu <16.04\n\nIf you’re trying to install the Monkey Island on Ubuntu 16.04 or older, you need to install the dependencies yourself, since Python 3.7 is only installable from the `deadsnakes` PPA. To install the Monkey Island on Ubuntu 16.04, follow the following steps:\n\n```\nsudo apt update\nsudo apt-get install libcurl4-openssl-dev\nsudo apt-get install software-properties-common\nsudo add-apt-repository ppa:deadsnakes/ppa\nsudo apt-get update\nsudo apt-get install python3.7-dev python3.7-venv python3-venv build-essential\nsudo dpkg -i monkey_island.deb  # this might print errors\nsudo apt install -f\n```\n\n### The Monkey Island interface isn't accessible after installation\n\nTo check the status of the Monkey Island after the installation, run the following command: `sudo service monkey-island status`.\n\nUpgrading\n---------\n\nTo upgrade when a new version comes out, download the new Monkey `.deb` file and install it. You should see a message like `Unpacking monkey-island (1.8.2) over (1.8.0)`. After which, the installation should complete successfully.\n\nIf you'd like to keep your existing configuration, you can export it to a file by using the Export button and then import it to the new server.\n\n![Export configuration](https://www.guardicore.com/infectionmonkey/docs/images/setup/export-configuration.png)"
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {}
+    }
+}
