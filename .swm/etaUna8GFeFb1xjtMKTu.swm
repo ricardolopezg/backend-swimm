@@ -1,0 +1,16 @@
+{
+    "id": "etaUna8GFeFb1xjtMKTu",
+    "name": "aws",
+    "content": [
+        {
+            "type": "text",
+            "text": "Deployment\n----------\n\nOn the [Infection Monkey’s AWS Marketplace page](https://aws.amazon.com/marketplace/pp/GuardiCore-Infection-Monkey/B07B3J7K6D), click **Continue to Subscribe**.\n\n1.  Choose the desired region.\n    \n2.  Choose an EC2 instance type with at least 1GB of RAM for optimal performance or stick with the recommended.\n    \n3.  Select the VPC and subnet you want the instance to be in.\n    \n4.  In the Security Group section, make sure ports 5000 and 5001 on the machine are accessible for inbound TCP traffic.\n    \n5.  Choose an existing EC2 key pair for authenticating with your new instance.\n    \n6.  Click **Launch with 1-click.**\n    \n\nAt this point, AWS will instance and deploy your new machine.\n\nWhen ready, you can browse to the Infection Monkey running on your fresh deployment at:\n\n`https://{public-ip}:5000`\n\nYou will be presented a login page. Use the username **monkey**, and the new EC2 instace’s instance ID for password. You can find the instance id by going to the EC2 console and selecting your instance. It should appear in the details pane below.\n\n![AWS instance ID](https://www.guardicore.com/infectionmonkey/docs/images/setup/aws/aws-instance-id.png)\n\nIntegration with AWS services\n-----------------------------\n\nThe Monkey has built-in integrations with AWS services for better execution and reporting. See [Usage -> Integrations](app://open_new_swimm_window/#/repos/Zg1flrWRgvls0c2mFyDI/file?filePath=../../usage/integrations) for more details.\n\nUpgrading\n---------\n\nCurrently there's no \"upgrade-in-place\" option when a new version comes out. To get the new version, you can deploy a new machine from the marketplace. If you'd like to keep your existing configuration, you can export it to a file by using the Export button and then import it to the new Monkey Island.\n\n![Export configuration](https://www.guardicore.com/infectionmonkey/docs/images/setup/export-configuration.png)"
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {}
+    }
+}
