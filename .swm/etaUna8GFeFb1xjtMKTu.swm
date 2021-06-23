@@ -1,0 +1,16 @@
+{
+    "id": "etaUna8GFeFb1xjtMKTu",
+    "name": "aws",
+    "content": [
+        {
+            "type": "text",
+            "text": "## Deployment\n\nOn the [Infection Monkey’s AWS Marketplace page](https://aws.amazon.com/marketplace/pp/GuardiCore-Infection-Monkey/B07B3J7K6D), click **Continue to Subscribe**.\n\n1. Choose the desired region.\n1. Choose an EC2 instance type with at least 1GB of RAM for optimal performance or stick with the recommended.\n1. Select the VPC and subnet you want the instance to be in.\n1. In the Security Group section, make sure ports 5000 and 5001 on the machine are accessible for inbound TCP traffic.\n1. Choose an existing EC2 key pair for authenticating with your new instance.\n1. Click **Launch with 1-click.**\n\nAt this point, AWS will instance and deploy your new machine.\n\nWhen ready, you can browse to  the Infection Monkey running on your fresh deployment at:\n\n`https://{public-ip}:5000`\n\nYou will be presented a login page. Use the username **monkey**, and the new EC2 instace’s instance ID for password. You can find the instance id by going to the EC2 console and selecting your instance. It should appear in the details pane below.\n\n![AWS instance ID](https://raw.githubusercontent.com/guardicore/monkey/develop/docs/static/images/setup/aws/aws-instance-id.png)\n\n## Integration with AWS services\n\nThe Monkey has built-in integrations with AWS services for better execution and reporting. See [Usage -> Integrations](../../usage/integrations) for more details.\n\n## Upgrading\n\nCurrently there's no \"upgrade-in-place\" option when a new version comes out. To get the new version, you can deploy a new machine from the marketplace. If you'd like to keep your existing configuration, you can export it to a file by using the Export button and then import it to the new Monkey Island.\n\n![Export configuration](https://raw.githubusercontent.com/guardicore/monkey/develop/docs/static/images/setup/export-configuration.png)\n"
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {}
+    }
+}
