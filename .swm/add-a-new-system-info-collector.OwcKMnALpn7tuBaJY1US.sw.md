@@ -1,21 +1,16 @@
-<div align="center" style="background-color: #e5ecff; color: black"><br/><div>DOC</div><h1>Add a new System Info Collector</h1><br/></div>
-<br/>
-
-### Files Used
-📄 monkey/common/data/system_info_collectors_names.py
-
-📄 monkey/infection_monkey/system_info/collectors/hostname_collector.py
-
-📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py
-
-📄 monkey/monkey_island/cc/services/config_schema/monkey.py
-
-📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/hostname.py
-
-📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py
-
-
-<br/>
+---
+id: OwcKMnALpn7tuBaJY1US
+name: Add a new System Info Collector
+file_version: 1.0.1
+app_version: 0.6.0-0
+file_blobs:
+  monkey/common/data/system_info_collectors_names.py: 175a054e1408805a4cebbe27e2f9616db40988cf
+  monkey/infection_monkey/system_info/collectors/hostname_collector.py: ae9560815d14351f8b5d7c6fd50f6888d9cf4309
+  monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py: 5f113f4a74200cd306c20f87f99f309a2d77ff6c
+  monkey/monkey_island/cc/services/config_schema/monkey.py: b47d6a15bc139dd6102fe805a6a48b13f700a7cd
+  monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/hostname.py: e2de4519cbd71bba70e81cf3ff61817437d95a21
+  monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py: 639a392ce4321c3ee9dbecae7a8dd372d7116f5a
+---
 
 # What are system info collectors?
 
@@ -39,10 +34,8 @@ Once you're done, make sure that your collector:
 
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/common/data/system_info_collectors_names.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/common/data/system_info_collectors_names.py
 ```python
 ⬜ 1      AWS_COLLECTOR = "AwsCollector"
 🟩 2      HOSTNAME_COLLECTOR = "HostnameCollector"
@@ -51,12 +44,11 @@ Once you're done, make sure that your collector:
 ⬜ 5      PROCESS_LIST_COLLECTOR = "ProcessListCollector"
 ⬜ 6      MIMIKATZ_COLLECTOR = "MimikatzCollector"
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/infection_monkey/system_info/collectors/hostname_collector.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/infection_monkey/system_info/collectors/hostname_collector.py
 ```python
 ⬜ 1      import logging
 🟩 2      import socket
@@ -76,12 +68,11 @@ Once you're done, make sure that your collector:
 🟩 16         def collect(self) -> dict:
 🟩 17             return {"hostname": socket.getfqdn()}
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py
 ```python
 ⬜ 1      from common.data.system_info_collectors_names import (AWS_COLLECTOR,
 ⬜ 2                                                            AZURE_CRED_COLLECTOR,
@@ -91,12 +82,11 @@ Once you're done, make sure that your collector:
 ⬜ 6                                                            PROCESS_LIST_COLLECTOR)
 ⬜ 7      
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py
 ```python
 ⬜ 37                 "info": "If on AWS, collects more information about the AWS instance currently running on.",
 ⬜ 38                 "attack_techniques": ["T1082"]
@@ -115,12 +105,11 @@ Once you're done, make sure that your collector:
 ⬜ 51                 "type": "string",
 ⬜ 52                 "enum": [
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/config_schema/monkey.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/config_schema/monkey.py
 ```python
 ⬜ 1      from common.data.system_info_collectors_names import (AWS_COLLECTOR,
 ⬜ 2                                                            AZURE_CRED_COLLECTOR,
@@ -130,12 +119,11 @@ Once you're done, make sure that your collector:
 ⬜ 6                                                            PROCESS_LIST_COLLECTOR)
 ⬜ 7      
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/config_schema/monkey.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/config_schema/monkey.py
 ```python
 ⬜ 88                         "default": [
 ⬜ 89                             ENVIRONMENT_COLLECTOR,
@@ -145,12 +133,11 @@ Once you're done, make sure that your collector:
 ⬜ 93                             MIMIKATZ_COLLECTOR,
 ⬜ 94                             AZURE_CRED_COLLECTOR
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/hostname.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/hostname.py
 ```python
 ⬜ 1      import logging
 ⬜ 2      
@@ -165,12 +152,11 @@ Once you're done, make sure that your collector:
 ⬜ 11    +# SWIMMER: Processing function goes here.
 🟩 12         Monkey.get_single_monkey_by_guid(monkey_guid).set_hostname(collector_results["hostname"])
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py
 ```python
 ⬜ 3      
 ⬜ 4      from common.data.system_info_collectors_names import (AWS_COLLECTOR,
@@ -187,12 +173,11 @@ Once you're done, make sure that your collector:
 ⬜ 15         test_antivirus_existence
 ⬜ 16     
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py
 ```python
 ⬜ 19     SYSTEM_INFO_COLLECTOR_TO_TELEMETRY_PROCESSORS = {
 ⬜ 20         AWS_COLLECTOR: [process_aws_telemetry],
@@ -202,12 +187,11 @@ Once you're done, make sure that your collector:
 ⬜ 24     }
 ⬜ 25     
 ```
+
 <br/>
 
 System info collectors are useful to get more data for various things, such as ZT tests or MITRE techniques. Take a look at some other techniques!
 
 <br/>
 
-<br/><br/>
-
-This file was generated by Swimm. [Click here to view it in the app](https://swimm.io/link?l=c3dpbW0lM0ElMkYlMkZyZXBvcyUyRlpnMWZscldSZ3ZsczBjMm1GeURJJTJGZG9jcyUyRk93Y0tNbkFMcG43dHVCYUpZMVVT). Timestamp: 2021-06-23T14:09:34.148Z (UTC)
+This file was generated by Swimm. [Click here to view it in the app](https://swimm.io/link?l=c3dpbW0lM0ElMkYlMkZyZXBvcyUyRlpnMWZscldSZ3ZsczBjMm1GeURJJTJGZG9jcyUyRk93Y0tNbkFMcG43dHVCYUpZMVVT). Timestamp: 2021-10-14T15:25:55.008Z (UTC)

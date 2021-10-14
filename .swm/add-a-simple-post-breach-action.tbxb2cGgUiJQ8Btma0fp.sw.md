@@ -1,17 +1,14 @@
-<div align="center" style="background-color: #e5ecff; color: black"><br/><div>DOC</div><h1>Add a simple Post Breach action</h1><br/></div>
-<br/>
-
-### Files Used
-📄 monkey/common/data/post_breach_consts.py
-
-📄 monkey/infection_monkey/post_breach/actions/add_user.py
-
-📄 monkey/monkey_island/cc/services/attack/technique_reports/T1136.py
-
-📄 monkey/monkey_island/cc/services/config_schema/definitions/post_breach_actions.py
-
-
-<br/>
+---
+id: tbxb2cGgUiJQ8Btma0fp
+name: Add a simple Post Breach action
+file_version: 1.0.1
+app_version: 0.6.0-0
+file_blobs:
+  monkey/common/data/post_breach_consts.py: 25e6679cb1623aae1a732deb05cc011a452743e3
+  monkey/infection_monkey/post_breach/actions/add_user.py: 58be89a1f114459aa3548fdeef16226ffe63aea0
+  monkey/monkey_island/cc/services/attack/technique_reports/T1136.py: 086a1c1399499897d4e49118332aead8d7d1f3b4
+  monkey/monkey_island/cc/services/config_schema/definitions/post_breach_actions.py: f1fe0f6f26030f3e9893bf63df97dd59d3837672
+---
 
 Read [our documentation about adding a new PBA](https://www.guardicore.com/infectionmonkey/docs/development/adding-post-breach-actions/).
 
@@ -30,10 +27,8 @@ Note that the PBA should impact the T1136 MITRE technique as well!
 
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/common/data/post_breach_consts.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/common/data/post_breach_consts.py
 ```python
 ⬜ 1      POST_BREACH_COMMUNICATE_AS_NEW_USER = "Communicate as new user"
 🟩 2      POST_BREACH_BACKDOOR_USER = "Backdoor user"
@@ -42,12 +37,11 @@ Note that the PBA should impact the T1136 MITRE technique as well!
 ⬜ 5      POST_BREACH_SHELL_STARTUP_FILE_MODIFICATION = "Modify shell startup file"
 ⬜ 6      POST_BREACH_HIDDEN_FILES = "Hide files and directories"
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/infection_monkey/post_breach/actions/add_user.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/infection_monkey/post_breach/actions/add_user.py
 ```python
 🟩 1      from common.data.post_breach_consts import POST_BREACH_BACKDOOR_USER
 🟩 2      from infection_monkey.config import WormConfiguration
@@ -66,12 +60,11 @@ Note that the PBA should impact the T1136 MITRE technique as well!
 🟩 15                 linux_cmd=' '.join(linux_cmds),
 🟩 16                 windows_cmd=windows_cmds)
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/attack/technique_reports/T1136.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/attack/technique_reports/T1136.py
 ```python
 ⬜ 1      from common.data.post_breach_consts import (
 🟩 2          POST_BREACH_BACKDOOR_USER, POST_BREACH_COMMUNICATE_AS_NEW_USER)
@@ -80,12 +73,11 @@ Note that the PBA should impact the T1136 MITRE technique as well!
 ⬜ 5          PostBreachTechnique
 ⬜ 6      
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/attack/technique_reports/T1136.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/attack/technique_reports/T1136.py
 ```python
 ⬜ 11         unscanned_msg = "Monkey didn't try creating a new user on the network's systems."
 ⬜ 12         scanned_msg = "Monkey tried creating a new user on the network's systems, but failed."
@@ -93,12 +85,11 @@ Note that the PBA should impact the T1136 MITRE technique as well!
 🟩 14         pba_names = [POST_BREACH_BACKDOOR_USER, POST_BREACH_COMMUNICATE_AS_NEW_USER]
 ⬜ 15    +    pba_names = [POST_BREACH_COMMUNICATE_AS_NEW_USER]
 ```
+
 <br/>
 
-<div style="background: #e5ecff; padding: 10px 10px 10px 10px; border-bottom: 1px solid #c1c7d0; border-radius: 4px; color: black">    📄 monkey/monkey_island/cc/services/config_schema/definitions/post_breach_actions.py ✅ Up to Date*
-
-   </div>
-
+<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+### 📄 monkey/monkey_island/cc/services/config_schema/definitions/post_breach_actions.py
 ```python
 ⬜ 4                         "might do after breaching a new machine. Used in ATT&CK and Zero trust reports.",
 ⬜ 5          "type": "string",
@@ -117,6 +108,7 @@ Note that the PBA should impact the T1136 MITRE technique as well!
 ⬜ 18                 "type": "string",
 ⬜ 19                 "enum": [
 ```
+
 <br/>
 
 Take a look at the configuration of the island again - see the "command to run after breach" option we offer the user? It's implemented exactly like you did right now but each user can do it for themselves. 
@@ -125,6 +117,4 @@ However, what if the PBA needs to do stuff which is more complex than just runni
 
 <br/>
 
-<br/><br/>
-
-This file was generated by Swimm. [Click here to view it in the app](https://swimm.io/link?l=c3dpbW0lM0ElMkYlMkZyZXBvcyUyRlpnMWZscldSZ3ZsczBjMm1GeURJJTJGZG9jcyUyRnRieGIyY0dnVWlKUThCdG1hMGZw). Timestamp: 2021-06-23T14:09:35.012Z (UTC)
+This file was generated by Swimm. [Click here to view it in the app](https://swimm.io/link?l=c3dpbW0lM0ElMkYlMkZyZXBvcyUyRlpnMWZscldSZ3ZsczBjMm1GeURJJTJGZG9jcyUyRnRieGIyY0dnVWlKUThCdG1hMGZw). Timestamp: 2021-10-14T15:25:56.271Z (UTC)

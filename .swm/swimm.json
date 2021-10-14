@@ -3,6 +3,7 @@
     "configuration": {
         "cr_prompt_push_solution": true,
         "store_solution_upon_done": true,
-        "autosync_applicable_units": false
+        "autosync_applicable_units": false,
+        "swmd": true
     }
 }
