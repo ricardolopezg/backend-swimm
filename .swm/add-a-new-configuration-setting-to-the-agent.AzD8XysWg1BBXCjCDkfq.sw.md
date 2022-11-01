@@ -4,7 +4,7 @@ name: Add a new configuration setting to the Agent ⚙
 file_version: 1.0.2
 app_version: 0.9.8-4
 file_blobs:
-  monkey/infection_monkey/config.py: dd91d6f18ff4aeee0fad59935af1eaf00eeaf28e
+  monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
   monkey/infection_monkey/monkey.py: a15a06edff7b75a71925398353680ae180cad115
   monkey/monkey_island/cc/services/config_schema/internal.py: bdbae24615730e417ba7421e95358c09e9e2d3a0
 ---
@@ -39,7 +39,7 @@ In this step we define the value
 ⬜ 132        system_info_collector_classes = []
 ⬜ 133    
 🟩 134        # how many victims to look for in a single scan iteration
-🟩 135        test_victims = "100"
+🟩 135        victims_max_find = 100
 🟩 136    
 ⬜ 137        # how many victims to exploit before stopping
 ⬜ 138        victims_max_exploit = 100
