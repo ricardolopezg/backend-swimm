@@ -132,7 +132,7 @@ class Configuration(object):
     system_info_collector_classes = []
 
     # how many victims to look for in a single scan iteration
-    test_victims = "100"
+    victims_max_find = 100
 
     # how many victims to exploit before stopping
     victims_max_exploit = 100
