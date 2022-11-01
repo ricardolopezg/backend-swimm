@@ -1,8 +1,8 @@
 ---
 id: OwcKMnALpn7tuBaJY1US
 name: Add a new System Info Collector
-file_version: 1.0.1
-app_version: 0.6.0-0
+file_version: 1.0.2
+app_version: 0.9.8-4
 file_blobs:
   monkey/common/data/system_info_collectors_names.py: 175a054e1408805a4cebbe27e2f9616db40988cf
   monkey/infection_monkey/system_info/collectors/hostname_collector.py: ae9560815d14351f8b5d7c6fd50f6888d9cf4309
@@ -14,40 +14,51 @@ file_blobs:
 
 # What are system info collectors?
 
-Well, the name pretty much explains it. They are Monkey classes which collect various information regarding the victim system, such as Environment, SSH Info, Process List, Netstat and more. 
+Well, the name pretty much explains it. They are Monkey classes which collect various information regarding the victim system, such as Environment, SSH Info, Process List, Netstat and more.
 
-## What should I add? 
+## What should I add?
 
 A system info collector which collects the hostname of the system.
 
 ## Test manually
 
 Once you're done, make sure that your collector:
-* Appears in the Island configuration, and is enabled by default
-* The collector actually runs when executing a Monkey.
-* Results show up in the relevant places:
-  * The infection map.
-  * The security report.
-  * The relevant MITRE techniques.
+
+*   Appears in the Island configuration, and is enabled by default
+    
+*   The collector actually runs when executing a Monkey.
+    
+*   Results show up in the relevant places:
+    
+    *   The infection map.
+        
+    *   The security report.
+        
+    *   The relevant MITRE techniques.
+        
 
 **There are a lot of hints for this unit - don't be afraid to use them!**
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/common/data/system_info_collectors_names.py
 ```python
 ⬜ 1      AWS_COLLECTOR = "AwsCollector"
 🟩 2      HOSTNAME_COLLECTOR = "HostnameCollector"
-⬜ 3     +# SWIMMER: Collector name goes here.
-⬜ 4      ENVIRONMENT_COLLECTOR = "EnvironmentCollector"
-⬜ 5      PROCESS_LIST_COLLECTOR = "ProcessListCollector"
-⬜ 6      MIMIKATZ_COLLECTOR = "MimikatzCollector"
+⬜ 3      ENVIRONMENT_COLLECTOR = "EnvironmentCollector"
+⬜ 4      PROCESS_LIST_COLLECTOR = "ProcessListCollector"
+⬜ 5      MIMIKATZ_COLLECTOR = "MimikatzCollector"
+⬜ 6      AZURE_CRED_COLLECTOR = "AzureCollector"
 ```
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/infection_monkey/system_info/collectors/hostname_collector.py
 ```python
 ⬜ 1      import logging
@@ -56,22 +67,24 @@ Once you're done, make sure that your collector:
 🟩 4      from common.data.system_info_collectors_names import HOSTNAME_COLLECTOR
 🟩 5      from infection_monkey.system_info.system_info_collector import \
 🟩 6          SystemInfoCollector
-⬜ 7      
-⬜ 8      logger = logging.getLogger(__name__)
-⬜ 9      
+🟩 7      
+🟩 8      logger = logging.getLogger(__name__)
+🟩 9      
 🟩 10     
-⬜ 11    +# SWIMMER: The collector class goes here.
-🟩 12     class HostnameCollector(SystemInfoCollector):
-🟩 13         def __init__(self):
-🟩 14             super().__init__(name=HOSTNAME_COLLECTOR)
-🟩 15     
-🟩 16         def collect(self) -> dict:
-🟩 17             return {"hostname": socket.getfqdn()}
+🟩 11     class HostnameCollector(SystemInfoCollector):
+🟩 12         def __init__(self):
+🟩 13             super().__init__(name=HOSTNAME_COLLECTOR)
+🟩 14     
+🟩 15         def collect(self) -> dict:
+🟩 16             return {"hostname": socket.getfqdn()}
+🟩 17     
 ```
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py
 ```python
 ⬜ 1      from common.data.system_info_collectors_names import (AWS_COLLECTOR,
@@ -85,30 +98,34 @@ Once you're done, make sure that your collector:
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/config_schema/definitions/system_info_collector_classes.py
 ```python
 ⬜ 37                 "info": "If on AWS, collects more information about the AWS instance currently running on.",
 ⬜ 38                 "attack_techniques": ["T1082"]
 ⬜ 39             },
 🟩 40             {
-⬜ 41    +        # SWIMMER: Collector config goes here. Tip: Hostname collection relates to the T1082 and T1016 techniques.
-🟩 42                 "type": "string",
-🟩 43                 "enum": [
-🟩 44                     HOSTNAME_COLLECTOR
-🟩 45                 ],
-🟩 46                 "title": "Hostname collector",
-🟩 47                 "info": "Collects machine's hostname.",
-🟩 48                 "attack_techniques": ["T1082", "T1016"]
-🟩 49             },
-⬜ 50             {
-⬜ 51                 "type": "string",
-⬜ 52                 "enum": [
+🟩 41                 "type": "string",
+🟩 42                 "enum": [
+🟩 43                     HOSTNAME_COLLECTOR
+🟩 44                 ],
+🟩 45                 "title": "Hostname collector",
+🟩 46                 "info": "Collects machine's hostname.",
+🟩 47                 "attack_techniques": ["T1082", "T1016"]
+🟩 48             },
+🟩 49             {
+⬜ 50                 "type": "string",
+⬜ 51                 "enum": [
+⬜ 52                     PROCESS_LIST_COLLECTOR
 ```
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/config_schema/monkey.py
 ```python
 ⬜ 1      from common.data.system_info_collectors_names import (AWS_COLLECTOR,
@@ -122,7 +139,9 @@ Once you're done, make sure that your collector:
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/config_schema/monkey.py
 ```python
 ⬜ 88                         "default": [
@@ -136,26 +155,28 @@ Once you're done, make sure that your collector:
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/hostname.py
 ```python
 ⬜ 1      import logging
 ⬜ 2      
 🟩 3      from monkey_island.cc.models.monkey import Monkey
-⬜ 4     +# SWIMMER: This will be useful :) monkey_island.cc.models.monkey.Monkey has the useful
-⬜ 5     +# "get_single_monkey_by_guid" and "set_hostname" methods.
-⬜ 6      
-⬜ 7      logger = logging.getLogger(__name__)
-⬜ 8      
-⬜ 9      
-🟩 10     def process_hostname_telemetry(collector_results, monkey_guid):
-⬜ 11    +# SWIMMER: Processing function goes here.
-🟩 12         Monkey.get_single_monkey_by_guid(monkey_guid).set_hostname(collector_results["hostname"])
+🟩 4      
+🟩 5      logger = logging.getLogger(__name__)
+🟩 6      
+🟩 7      
+🟩 8      def process_hostname_telemetry(collector_results, monkey_guid):
+🟩 9          Monkey.get_single_monkey_by_guid(monkey_guid).set_hostname(collector_results["hostname"])
+🟩 10     
 ```
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py
 ```python
 ⬜ 3      
@@ -176,7 +197,9 @@ Once you're done, make sure that your collector:
 
 <br/>
 
-<!-- NOTE-swimm-snippet: the lines below links your snippet to Swimm -->
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/monkey_island/cc/services/telemetry/processing/system_info_collectors/system_info_telemetry_dispatcher.py
 ```python
 ⬜ 19     SYSTEM_INFO_COLLECTOR_TO_TELEMETRY_PROCESSORS = {
@@ -194,4 +217,4 @@ System info collectors are useful to get more data for various things, such as Z
 
 <br/>
 
-This file was generated by Swimm. [Click here to view it in the app](https://swimm.io/link?l=c3dpbW0lM0ElMkYlMkZyZXBvcyUyRlpnMWZscldSZ3ZsczBjMm1GeURJJTJGZG9jcyUyRk93Y0tNbkFMcG43dHVCYUpZMVVT). Timestamp: 2021-10-14T15:25:55.008Z (UTC)
+This file was generated by Swimm. [Click here to view it in the app](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBYmFja2VuZC1zd2ltbSUzQSUzQXJpY2FyZG9sb3Blemc=/docs/OwcKMnALpn7tuBaJY1US).
