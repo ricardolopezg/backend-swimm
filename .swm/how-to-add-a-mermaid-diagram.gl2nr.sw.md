@@ -1,6 +1,6 @@
 ---
 id: gl2nr
-name: How to Add a Mermaid Diagram
+name: How to Add a Mermaid Diagram.
 file_version: 1.0.2
 app_version: 0.9.8-4
 file_blobs:
@@ -15,8 +15,7 @@ A[generate_victims] -->|Clicks Link| B(Landing Page)
 B --> C{onClick}
 C -->|One| D[Harvest Data]
 C -->|Two| E[Phish]
-C -->|Three| F[Exploit]
-```
+C -->|Three| F[Exploit]```
 <!--MCONTENT {content: graph TD
 A\[`generate_victims`[<sup id="Z1TbLj9">↓</sup>](#f-Z1TbLj9)\] \-\-\>|Clicks Link| B(Landing Page)
 B \-\-\> C{`onClick`[<sup id="1AAyRO">↓</sup>](#f-1AAyRO)}
