@@ -2,7 +2,7 @@
 id: qfdd1
 name: How to Add a Mermaid Diagram
 file_version: 1.0.2
-app_version: 0.9.8-4
+app_version: 0.10.0-2
 file_blobs:
   monkey/infection_monkey/model/victim_host_generator.py: 1e9eba9c2ebb8163b0e325a1fd0f72b4cadba533
   monkey/monkey_island/cc/ui/src/components/ui-components/DropdownSelect.js: 8628c0b607351b9562abd17ac4cd20f68070f0f9
@@ -11,18 +11,22 @@ file_blobs:
 <!--MERMAID {width:100}-->
 ```mermaid
 graph TD
-    A[generate_victims] -->|Clicks Link| B(Landing Page)
-    B --> C{onClick}
-    C -->|One| D[Harvest Data]
-    C -->|Two| E[Phish]
-    C -->|Three| F[Exploit]
+A[generate_victims] -->|Clicks Link| B(Landing Page)
+B --> C{onClick}
+C -->|One| D[Harvest Data]
+C -->|Two| E[Phish]
+C -->|Three| F[Exploit]
 ```
-<!--MCONTENT {content: graph TD  
-A\[`generate_victims`[<sup id="Z1TbLj9">↓</sup>](#f-Z1TbLj9)\] \-\-\>|Clicks Link| B(Landing Page)  
-B \-\-\> C{`onClick`[<sup id="1AAyRO">↓</sup>](#f-1AAyRO)}  
-C \-\-\>|One| D\[Harvest Data\]  
-C \-\-\>|Two| E\[Phish\]  
+<!--MCONTENT {content: graph TD
+A\[`generate_victims`[<sup id="Z1TbLj9">↓</sup>](#f-Z1TbLj9)\] \-\-\>|Clicks Link| B(Landing Page)
+B \-\-\> C{`onClick`[<sup id="1AAyRO">↓</sup>](#f-1AAyRO)}
+C \-\-\>|One| D\[Harvest Data\]
+C \-\-\>|Two| E\[Phish\]
 C \-\-\>|Three| F\[Exploit\]} --->
+
+<br/>
+
+Hello
 
 <br/>
 
