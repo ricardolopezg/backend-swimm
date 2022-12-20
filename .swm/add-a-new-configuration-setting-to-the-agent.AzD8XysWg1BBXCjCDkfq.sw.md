@@ -2,7 +2,7 @@
 id: AzD8XysWg1BBXCjCDkfq
 name: Add a new configuration setting to the Agent ⚙
 file_version: 1.0.2
-app_version: 0.9.8-4
+app_version: 0.10.4
 file_blobs:
   monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
   monkey/infection_monkey/monkey.py: a15a06edff7b75a71925398353680ae180cad115
@@ -40,10 +40,9 @@ In this step we define the value
 ⬜ 133    
 🟩 134        # how many victims to look for in a single scan iteration
 🟩 135        victims_max_find = 100
-🟩 136    
+⬜ 136    
 ⬜ 137        # how many victims to exploit before stopping
 ⬜ 138        victims_max_exploit = 100
-⬜ 139    
 ```
 
 <br/>
