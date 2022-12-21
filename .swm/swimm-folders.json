@@ -1,8 +1,0 @@
-{
-    "monkey": {
-        "comment": "This is our main folder where most of the logic resides"
-    },
-    "": {
-        "comment": "The Infection Monkey is an open source security tool for testing a data center's resiliency to perimeter breaches and internal server infection. The Monkey uses various methods to self propagate across a data center and reports success to a centralized Monkey Island server."
-    }
-}
