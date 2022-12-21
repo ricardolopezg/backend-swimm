@@ -1,9 +1,6 @@
 {
-    "repo_id": "Zg1flrWRgvls0c2mFyDI",
+    "repo_id": "Z2l0aHViJTNBJTNBYmFja2VuZC1zd2ltbSUzQSUzQXJpY2FyZG9sb3Blemc=",
     "configuration": {
-        "cr_prompt_push_solution": true,
-        "store_solution_upon_done": true,
-        "autosync_applicable_units": false,
         "swmd": true
     }
 }
