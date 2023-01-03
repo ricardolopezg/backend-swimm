@@ -2,7 +2,7 @@
 id: AzD8XysWg1BBXCjCDkfq
 name: Add a new configuration setting to the Agent ⚙
 file_version: 1.1.0
-app_version: 0.11.1
+app_version: 1.0.1
 file_blobs:
   monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
   monkey/infection_monkey/monkey.py: a15a06edff7b75a71925398353680ae180cad115
@@ -47,6 +47,10 @@ In this step we define the value
 
 <br/>
 
+<br/>
+
+<br/>
+
 In this step we use the configuration value
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/infection_monkey/monkey.py
@@ -60,6 +64,10 @@ In this step we use the configuration value
 ⬜ 165                    for machine in machines:
 ⬜ 166                        if ControlClient.check_for_stop():
 ```
+
+<br/>
+
+<br/>
 
 <br/>
 
