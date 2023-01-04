@@ -1,13 +1,13 @@
 ---
 id: 4s0xw
 name: Add Code Snippet from Multiple Repos
-file_version: 1.0.2
-app_version: 0.10.1-2
+file_version: 1.1.0
+app_version: 1.0.1
 file_blobs:
   monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
 cross_repo_file_blobs:
   Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:
-    setup.py: 3f6968d130c29334413751bd7b322f9ab9a51502
+    api-docs/components/schemas/avatar.json: 83da724b49d9acdef3b0455351b75d41e0861e4e
 ---
 
 <br/>
@@ -18,7 +18,7 @@ cross_repo_file_blobs:
 
 <br/>
 
-<br/>
+<!-- empty line --><br/>
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/infection_monkey/config.py
 ```python
@@ -40,22 +40,25 @@ cross_repo_file_blobs:
 
 <br/>
 
-<br/>
 
-<br/>
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 <!-- NOTE-swimm-repo ::Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:: -->
-### 📄 setup.py
-```python
-⬜ 16     
-⬜ 17     from distutils.command.build import build as BuildCommand
-⬜ 18     
-🟩 19     from setuptools import find_packages, setup
-🟩 20     from setuptools.command.develop import develop as DevelopCommand
-🟩 21     from setuptools.command.sdist import sdist as SDistCommand
-⬜ 22     
-⬜ 23     ROOT = os.path.dirname(os.path.abspath(__file__))
-⬜ 24     
+### 📄 api-docs/components/schemas/avatar.json
+```json
+🟩 1      {
+🟩 2        "Avatar": {
+🟩 3          "type": "object",
+🟩 4          "properties": {
+🟩 5            "avatarType": {
+🟩 6              "type": "string"
+🟩 7            },
+🟩 8            "avatarUuid": {
+🟩 9              "type": "string",
+🟩 10             "nullable": true
+🟩 11           }
+🟩 12         }
+🟩 13       }
+🟩 14     }
 ```
 
 <br/>
