@@ -1,8 +1,8 @@
 ---
 id: 4s0xw
 name: Add Code Snippet from Multiple Repos
-file_version: 1.0.2
-app_version: 0.10.1-2
+file_version: 1.1.0
+app_version: 1.0.3
 file_blobs:
   monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
 cross_repo_file_blobs:
@@ -10,15 +10,13 @@ cross_repo_file_blobs:
     setup.py: 3f6968d130c29334413751bd7b322f9ab9a51502
 ---
 
-<br/>
-
 ### _First code snippet_ is from this repository, **backend-swimm.**
 
 <br/>
 
 <br/>
 
-<br/>
+<!-- empty line --><br/>
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/infection_monkey/config.py
 ```python
@@ -42,7 +40,7 @@ cross_repo_file_blobs:
 
 <br/>
 
-<br/>
+<!-- empty line --><br/>
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 <!-- NOTE-swimm-repo ::Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:: -->
 ### 📄 setup.py
