@@ -12,7 +12,7 @@ cross_repo_file_blobs:
 
 <br/>
 
-### _First code snippet_ is from this repository, **backend-swimm.** [Test playlist](test-playlist.s5o1v.pl.sw.md)
+### _First code snippet_ is from this repository, **backend-swimm.**
 
 <br/>
 
