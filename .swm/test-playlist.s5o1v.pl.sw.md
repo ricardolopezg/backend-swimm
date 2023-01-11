@@ -10,12 +10,6 @@ External link doesn't activate the button to be clicked, but pressing enter conf
 
 <br/>
 
-Also, the previous entry in the input field is saved as a state and prefilled for new entries.
-
-enter key works
-
-<br/>
-
 <!-- Steps - Do not remove this comment -->
 1. [Add Code Snippet from Multiple Repos](add-code-snippet-from-multiple-repos.4s0xw.sw.md)
 2. [Accounts and Security](accounts-and-security.7jsNkcP7PRmcWrF0f3cj.sw.md)
@@ -23,7 +17,8 @@ enter key works
 4. [Acceptance Tests](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn/docs/1mwb9)
 5. [video](https://youtu.be/FfXIsvDzfF0)
 6. [blog](https://swimm.io/blog/integrating-swimm-and-continuous-documentation-into-your-workflow/)
-7. [blog 2](https://swimm.io/blog/integrating-swimm-and-continuous-documentation-into-your-workflow/)
+7. [ssss](https://docs.swimm.io/)
+8. [blog 2](https://swimm.io/blog/integrating-swimm-and-continuous-documentation-into-your-workflow/)
 
 
 <br/>
