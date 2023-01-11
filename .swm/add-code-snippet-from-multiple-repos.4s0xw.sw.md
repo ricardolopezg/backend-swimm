@@ -7,7 +7,7 @@ file_blobs:
   monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
 cross_repo_file_blobs:
   Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:
-    setup.py: 3f6968d130c29334413751bd7b322f9ab9a51502
+    tests/sentry/utils/test_dates.py: 25630d79a7961446631275851544581315c1c2bf
 ---
 
 <br/>
@@ -16,23 +16,13 @@ cross_repo_file_blobs:
 
 <br/>
 
-<br/>
 
-<!-- empty line --><br/>
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/infection_monkey/config.py
 ```python
-⬜ 131        exploiter_classes = []
-⬜ 132        system_info_collector_classes = []
-⬜ 133    
-🟩 134        # how many victims to look for in a single scan iteration
-🟩 135        victims_max_find = 100
-⬜ 136    
-⬜ 137        # how many victims to exploit before stopping
-⬜ 138        victims_max_exploit = 100
+🟩 137        # how many victims to exploit before stopping
+🟩 138        victims_max_exploit = 100
 ```
-
-<br/>
 
 <br/>
 
@@ -40,23 +30,20 @@ cross_repo_file_blobs:
 
 <br/>
 
-<br/>
 
-<!-- empty line --><br/>
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 <!-- NOTE-swimm-repo ::Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:: -->
-### 📄 setup.py
+### 📄 tests/sentry/utils/test_dates.py
 ```python
-⬜ 16     
-⬜ 17     from distutils.command.build import build as BuildCommand
-⬜ 18     
-🟩 19     from setuptools import find_packages, setup
-🟩 20     from setuptools.command.develop import develop as DevelopCommand
-🟩 21     from setuptools.command.sdist import sdist as SDistCommand
-⬜ 22     
-⬜ 23     ROOT = os.path.dirname(os.path.abspath(__file__))
-⬜ 24     
+🟩 8      def test_timestamp_conversions():
+🟩 9          value = datetime.datetime(2015, 10, 1, 21, 19, 5, 648517, tzinfo=pytz.utc)
+🟩 10         assert int(to_timestamp(value)) == int(value.strftime("%s"))
+🟩 11         assert to_datetime(to_timestamp(value)) == value
 ```
+
+<br/>
+
+<br/>
 
 <br/>
 
