@@ -10,8 +10,6 @@ Welcome to Swimm! Here is a checklist of resources we'd like you to complete. Ha
 
 <br/>
 
-<br/>
-
 <!-- Steps - Do not remove this comment -->
 1. [Add Code Snippet from Multiple Repos](add-code-snippet-from-multiple-repos.4s0xw.sw.md)
 2. [Accounts and Security](accounts-and-security.7jsNkcP7PRmcWrF0f3cj.sw.md)
