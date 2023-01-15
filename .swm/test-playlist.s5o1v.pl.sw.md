@@ -1,6 +1,6 @@
 ---
 id: s5o1v
-title: Test Playlist
+title: Test playlist
 file_version: 1.1.1
 app_version: 1.0.8
 ---
