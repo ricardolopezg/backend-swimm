@@ -1,8 +1,8 @@
 ---
 id: s5o1v
-name: Test playlist
-file_version: 1.1.0
-app_version: 1.0.6
+title: Test Playlist
+file_version: 1.1.1
+app_version: 1.0.8
 ---
 
 <!-- Intro - Do not remove this comment -->
