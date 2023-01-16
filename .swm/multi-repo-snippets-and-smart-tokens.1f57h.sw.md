@@ -2,10 +2,20 @@
 id: 1f57h
 title: Multi-Repo Snippets and Smart Tokens
 file_version: 1.1.1
-app_version: 1.0.8
+app_version: 1.0.12
 ---
 
 ### _First code snippet_ is from this repository, **backend-swimm.**
+
+<br/>
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 monkey/infection_monkey/config.py
+```python
+134        # how many victims to look for in a single scan iteration
+135        victims_max_find = 100
+```
 
 <br/>
 
@@ -13,9 +23,23 @@ app_version: 1.0.8
 
 <br/>
 
-### Multi-Repo Smart Tokens
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+<!-- NOTE-swimm-repo ::Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:: -->
+### 📄 setup.py
+```python
+19     from setuptools import find_packages, setup
+20     from setuptools.command.develop import develop as DevelopCommand
+21     from setuptools.command.sdist import sdist as SDistCommand
+```
 
 <br/>
+
+<br/>
+
+### Multi-Repo Smart Tokens
+
+Check `config`<swm-token data-swm-token=":monkey/monkey_island/cc/ui/src/config/dev.js:5:2:2:`let config = {`"/>, related to `SentrySDistCommand`<swm-token data-swm-token="Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:setup.py:39:2:2:`class SentrySDistCommand(SDistCommand):`"/>. Review `victims_max_find`<swm-token data-swm-token=":monkey/infection_monkey/config.py:135:1:1:`    victims_max_find = 100`"/> after the first result.
 
 <br/>
 
