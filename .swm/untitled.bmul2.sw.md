@@ -1,6 +1,6 @@
 ---
 id: bmul2
-title: s
+title: Untitled
 file_version: 1.1.1
 app_version: 1.1.4
 ---
