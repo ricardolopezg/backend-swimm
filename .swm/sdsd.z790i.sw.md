@@ -10,12 +10,6 @@ sdsd<br/>
 <br/>
 
 
-<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
-### 📄 .travis.yml
-```yaml
-11       - directories:
-12         - "$HOME/.npm"
-```
 
 <br/>
 
