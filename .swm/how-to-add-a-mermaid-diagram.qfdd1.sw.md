@@ -1,11 +1,8 @@
 ---
 id: qfdd1
-name: How to Add a Mermaid Diagram
-file_version: 1.1.0
-app_version: 0.11.1
-file_blobs:
-  monkey/infection_monkey/model/victim_host_generator.py: 1e9eba9c2ebb8163b0e325a1fd0f72b4cadba533
-  monkey/monkey_island/cc/ui/src/components/ui-components/DropdownSelect.js: 8628c0b607351b9562abd17ac4cd20f68070f0f9
+title: How to Add a Mermaid Diagram
+file_version: 1.1.1
+app_version: 1.1.4
 ---
 
 <!--MERMAID {width:100}-->
@@ -18,6 +15,10 @@ C -->|Two| E[Phish]
 C -->|Three| F[Exploit]
 ```
 <!--MCONTENT {content: "graph TD<br/>\nA\\[`generate_victims`<swm-token data-swm-token=\":monkey/infection_monkey/model/victim_host_generator.py:10:3:3:`    def generate_victims(self, chunk_size):`\"/>\\] \\-\\-\\>|Clicks Link| B(Landing Page)<br/>\nB \\-\\-\\> C{`onClick`<swm-token data-swm-token=\":monkey/monkey_island/cc/ui/src/components/ui-components/DropdownSelect.js:54:1:1:`  onClick: PropTypes.func`\"/>}<br/>\nC \\-\\-\\>|One| D\\[Harvest Data\\]<br/>\nC \\-\\-\\>|Two| E\\[Phish\\]<br/>\nC \\-\\-\\>|Three| F\\[Exploit\\]"} --->
+
+<br/>
+
+Search Term: PIQ
 
 <br/>
 
