@@ -2,10 +2,24 @@
 id: z790i
 title: sdsd
 file_version: 1.1.1
-app_version: 1.0.19
+app_version: 1.1.4
 ---
 
-sdsd
+sdsd<br/>
+
+<br/>
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 .travis.yml
+```yaml
+11       - directories:
+12         - "$HOME/.npm"
+```
+
+<br/>
+
+`📄 .gitmodules`
 
 <br/>
 
