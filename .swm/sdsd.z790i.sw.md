@@ -9,7 +9,19 @@ sdsd<br/>
 
 <br/>
 
+<br/>
 
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 .travis.yml
+```yaml
+9      cache:
+10       - pip
+11       - directories:
+12         - "$HOME/.npm"
+```
+
+<br/>
 
 <br/>
 
