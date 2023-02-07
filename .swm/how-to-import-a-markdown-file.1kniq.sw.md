@@ -2,7 +2,7 @@
 id: 1kniq
 title: How to import a markdown file
 file_version: 1.1.1
-app_version: 1.0.12
+app_version: 1.1.5
 ---
 
 # An h1 header
@@ -27,8 +27,6 @@ Note that --- not considering the asterisk --- the actual text content starts at
 Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all in chapters 12--14"). Three dots ... will be converted to an ellipsis. Unicode is supported. ☺
 
 ## An h2 header
-
-<br/>
 
 <br/>
 
@@ -145,8 +143,6 @@ Here's a "line block" (note how whitespace is honored):
 | Line one | Line too | Line tree
 
 and images can be specified like so:
-
-<br/>
 
 <br/>
 
