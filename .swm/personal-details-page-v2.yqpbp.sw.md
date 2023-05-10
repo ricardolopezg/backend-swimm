@@ -9,9 +9,30 @@ app_version: 1.8.3
 
 # Version 1.0.1
 
-/n
+```
+jdsabfkjabflbrbfbf
+```
+
+`` `bh` ``
+
+<br/>
+
+<br/>
 
 # Designs
+
+<br/>
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 monkey/infection_monkey/telemetry/exploit_telem.py
+```python
+12             :param result: The result from the 'exploit_host' method.
+13             """
+14             super(ExploitTelem, self).__init__()
+15             self.exploiter = exploiter
+16             self.result = result
+```
 
 <br/>
 
