@@ -2,7 +2,7 @@
 id: mrqjs
 title: Test's First Doc
 file_version: 1.1.2
-app_version: 1.7.1
+app_version: 1.9.14
 cross_repo_names:
   frontend-swimm: Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn
 ---
@@ -53,6 +53,7 @@ explanation
 
 <br/>
 
+
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 <!-- NOTE-swimm-repo ::Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:: -->
 ### 📄 src/social_auth/migrations/0001_initial.py
@@ -75,9 +76,18 @@ ORDER ||--|{ ORDER-ITEM : includes
 PRODUCT-CATEGORY ||--|{ PRODUCT : contains
 PRODUCT ||--o{ ORDER-ITEM : "ordered in"
 
-
 ```
-<!--MCONTENT {content: "erDiagram<br/>\nCUSTOMER }|..|{ `virtual_path`<swm-token data-swm-token=\":monkey/infection_monkey/monkeyfs.py:51:2:2:`def virtual_path(name):`\"/> : has<br/>\nCUSTOMER ||--o{ ORDER : places<br/>\nCUSTOMER ||--o{ INVOICE : \"liable for\"<br/>\nDELIVERY-ADDRESS ||--o{ ORDER : receives<br/>\nINVOICE ||--|{ ORDER : covers<br/>\nORDER ||--|{ ORDER-ITEM : includes<br/>\nPRODUCT-CATEGORY ||--|{ PRODUCT : contains<br/>\nPRODUCT ||--o{ ORDER-ITEM : \"ordered in\"<br/>\n\n<br/>"} --->
+<!--MCONTENT {content: "erDiagram<br/>\nCUSTOMER }|..|{ `virtual_path`<swm-token data-swm-token=\":monkey/infection_monkey/monkeyfs.py:51:2:2:`def virtual_path(name):`\"/> : has<br/>\nCUSTOMER ||--o{ ORDER : places<br/>\nCUSTOMER ||--o{ INVOICE : \"liable for\"<br/>\nDELIVERY-ADDRESS ||--o{ ORDER : receives<br/>\nINVOICE ||--|{ ORDER : covers<br/>\nORDER ||--|{ ORDER-ITEM : includes<br/>\nPRODUCT-CATEGORY ||--|{ PRODUCT : contains<br/>\nPRODUCT ||--o{ ORDER-ITEM : \"ordered in\"<br/>\n<br/>"} --->
+
+<br/>
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 LICENSE
+```
+14     to take away your freedom to share and change the works.  By contrast,
+15     the GNU General Public License is intended to guarantee your freedom to
+```
 
 <br/>
 
