@@ -1,12 +1,12 @@
 ---
 id: s86ocx3a
-title: Test PR
+title: Test Playlist
 file_version: 1.1.2
 app_version: 1.11.9
 ---
 
 <!-- Intro - Do not remove this comment -->
-Hi I am a playlist
+Hi I am a playlist (mod)
 
 <br/>
 
