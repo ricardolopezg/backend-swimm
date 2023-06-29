@@ -6,11 +6,7 @@ app_version: 1.11.9
 ---
 
 <!-- Intro - Do not remove this comment -->
-# Title
-
-<br/>
-
-Intro copy
+# Title 2
 
 <br/>
 
