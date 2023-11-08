@@ -1,13 +1,10 @@
 ---
 id: 4s0xw
-name: Add Code Snippet from Multiple Repos
-file_version: 1.1.0
-app_version: 1.0.6
-file_blobs:
-  monkey/infection_monkey/config.py: 1fbcb876bb4589c9d2cbb22168b4d8e14f7177cc
-cross_repo_file_blobs:
-  Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:
-    tests/sentry/utils/test_dates.py: 25630d79a7961446631275851544581315c1c2bf
+title: Add Code Snippet from Multiple Repos
+file_version: 1.1.3
+app_version: 1.18.27
+cross_repo_names:
+  frontend-swimm: Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn
 ---
 
 <br/>
@@ -20,8 +17,8 @@ cross_repo_file_blobs:
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 monkey/infection_monkey/config.py
 ```python
-🟩 137        # how many victims to exploit before stopping
-🟩 138        victims_max_exploit = 100
+137        # how many victims to exploit before stopping
+138        victims_max_exploit = 100
 ```
 
 <br/>
@@ -35,15 +32,15 @@ cross_repo_file_blobs:
 <!-- NOTE-swimm-repo ::Z2l0aHViJTNBJTNBZnJvbnRlbmQtc3dpbW0lM0ElM0FyaWNhcmRvbG9wZXpn:: -->
 ### 📄 tests/sentry/utils/test_dates.py
 ```python
-🟩 8      def test_timestamp_conversions():
-🟩 9          value = datetime.datetime(2015, 10, 1, 21, 19, 5, 648517, tzinfo=pytz.utc)
-🟩 10         assert int(to_timestamp(value)) == int(value.strftime("%s"))
-🟩 11         assert to_datetime(to_timestamp(value)) == value
+8      def test_timestamp_conversions():
+9          value = datetime.datetime(2015, 10, 1, 21, 19, 5, 648517, tzinfo=pytz.utc)
+10         assert int(to_timestamp(value)) == int(value.strftime("%s"))
+11         assert to_datetime(to_timestamp(value)) == value
 ```
 
 <br/>
 
-<br/>
+Cross repo path: `📄(frontend-swimm) src/sudo/forms.py`
 
 <br/>
 
