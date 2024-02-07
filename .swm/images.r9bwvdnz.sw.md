@@ -5,7 +5,9 @@ title: Images
 
 ![](/.swm/images/Screenshot%202023-01-18%20at%209.53.24%20PM-2024-1-7-21-8-24-87.jpg)
 
-&nbsp;
+## image 2
+
+![](/.swm/images/_ask%20linkedIn%20cover-2024-1-7-21-10-13-389.png)
 
 <https://www.youtube.com/watch?v=6YEnDqQezBk>
 
