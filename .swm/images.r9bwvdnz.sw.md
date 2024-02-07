@@ -1,13 +1,19 @@
 ---
 title: Images
 ---
-## image
+## image 1 - added from **/image** in web app and committed
 
 ![](/.swm/images/Screenshot%202023-01-18%20at%209.53.24%20PM-2024-1-7-21-8-24-87.jpg)
 
-## image 2
+## image 2 - added from **/image** in Webstorm and committed
 
 ![](/.swm/images/_ask%20linkedIn%20cover-2024-1-7-21-10-13-389.png)
+
+&nbsp;
+
+## image 3 - added from **Drag and Drop** in web app and committed
+
+![](/.swm/images/ask-swimm%20logo-black-2024-1-7-21-16-9-186.png)
 
 <https://www.youtube.com/watch?v=6YEnDqQezBk>
 
