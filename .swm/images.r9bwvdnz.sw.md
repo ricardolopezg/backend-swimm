@@ -1,15 +1,11 @@
 ---
-title: im
+title: Images
 ---
 ## image
 
-![](/.swm/images/Screenshot%202024-02-07%20at%203.16.20%E2%80%AFPM-2024-1-7-21-3-25-997.png)
-
-## block image
+![](/.swm/images/Screenshot%202023-01-18%20at%209.53.24%20PM-2024-1-7-21-8-24-87.jpg)
 
 &nbsp;
-
-<p align="center"><img src="/.swm/images/Screenshot%202024-02-07%20at%203.16.20%E2%80%AFPM-2024-1-7-21-3-46-276.png"></p>
 
 <https://www.youtube.com/watch?v=6YEnDqQezBk>
 
